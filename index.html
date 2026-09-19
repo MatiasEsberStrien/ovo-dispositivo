@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Preguntas del egreso</title>
+<title>Carreras nuevas, preguntas viejas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@ body{margin:0;background:var(--papel);color:var(--noche);
   font-size:.64rem;letter-spacing:.17em;text-transform:uppercase;line-height:1.8;border-bottom:3px solid var(--acento)}
 .membrete b{font-weight:700;display:block}
 .marco{max-width:70rem;margin:0 auto;padding:clamp(2.2rem,5vw,3.6rem) 24px clamp(3rem,6vw,5rem)}
-.encabezado{margin:0 0 clamp(1.8rem,4vw,2.8rem);max-width:34rem}
+.encabezado{margin:0 0 clamp(1.8rem,4vw,2.8rem);max-width:38rem}
 h1{font-size:clamp(2rem,5vw,2.9rem);line-height:1.05;margin:0 0 .7rem;letter-spacing:-.025em}
 .encabezado p{margin:0;color:var(--tenue);font-size:1.02rem}
 
@@ -66,8 +66,8 @@ dialog::backdrop{background:rgba(18,33,61,.72)}
 
 <div class="marco">
   <div class="encabezado">
-    <h1>Las preguntas del egreso</h1>
-    <p>Información para estudiantes que están terminando una carrera digital. Cada pregunta abre sus recursos.</p>
+    <h1>Carreras nuevas, preguntas viejas</h1>
+    <p>Estás terminando una <b>carrera que hace diez años no existía</b>. Nadie de tu familia la hizo, no hay un camino trazado, y las primeras camadas de egresados se cuentan con los dedos. Cada pregunta abre sus recursos.</p>
   </div>
 
   <div class="tablero">
@@ -75,7 +75,7 @@ dialog::backdrop{background:rgba(18,33,61,.72)}
     <button class="ficha" data-p="p2"><span class="rot">Práctica</span><p class="q">¿Dónde consigo experiencia?</p><span class="cuenta">5 programas en Córdoba</span></button>
     <button class="ficha ancha" data-p="p3"><span class="rot">Actualización</span><p class="q">¿Qué cambió mientras cursaba?</p><span class="cuenta">5 novedades con fuente</span></button>
     <button class="ficha ancha" data-p="p4"><span class="rot">Continuidad</span><p class="q">¿Puedo seguir estudiando?</p><span class="cuenta">4 casas de estudio en Córdoba</span></button>
-    <button class="ficha" data-p="p5"><span class="rot">Derechos</span><p class="q">¿Qué me corresponde?</p><span class="cuenta">4 temas</span></button>
+    <button class="ficha" data-p="p5"><span class="rot">Derechos</span><p class="q">¿Qué me corresponde?</p><span class="cuenta">6 temas, con fuente oficial</span></button>
     <button class="ficha" data-p="p6"><span class="rot">Información</span><p class="q">¿A quién le pregunto?</p><span class="cuenta">11 preguntas, 3 destinatarios</span></button>
   </div>
 </div>
@@ -94,9 +94,10 @@ var CONTENIDO = {
    {meta:"En una agencia", h:"Rol acotado, muchos clientes", p:"Se trabaja sobre una parte definida del proceso y para varias marcas a la vez. Se gana profundidad en una tarea y se pierde vista del conjunto."},
    {meta:"En una empresa", h:"Alcance amplio, una sola marca", p:"El área interna suele ser chica y cada persona toca varias tareas. Se ve el proceso completo, siempre sobre el mismo producto."},
    {meta:"Por tu cuenta", h:"Se elige el trabajo, y no hay equipo", p:"Mayor libertad para elegir proyectos y clientes, sin la estructura ni el aprendizaje que da trabajar con otros."}],
-  pend:[{h:"Las ramas concretas",p:"Qué se hace en cada una un martes cualquiera."},
-        {h:"Cómo se prueba una rama",p:"Antes de comprometer un año."},
-        {h:"Cómo te presentás sin recorrido",p:"Qué cuenta como antecedente."}]},
+  items2:[
+   {meta:"Las ramas del campo", h:"De qué se trabaja, concretamente", p:"Publicidad y pauta · comercio electrónico · contenido y producción audiovisual · redes y comunidad · analítica y datos · posicionamiento en buscadores. Casi nadie hace todas: se entra por una y se suma el resto."},
+   {meta:"HubSpot Academy · gratis, con certificado", h:"Probar una rama sin comprometer un año", u:"https://academy.hubspot.com/es/courses/digital-marketing", p:"Cursos en castellano, gratis, y el certificado no se paga. Sirve para ver si una rama te interesa antes de apostarle."},
+   {meta:"Google Skillshop · gratis", h:"Certificaciones de las plataformas que se usan", u:"https://skillshop.withgoogle.com/", p:"Las certificaciones de Google Ads y Analytics, sin costo. Son las herramientas que aparecen en casi toda búsqueda laboral del rubro."}]},
 
  p2:{rot:"Práctica", t:"¿Dónde consigo experiencia?",
   clave:"Cada link abre directamente donde se completa la postulación. Verificados el 19 de septiembre de 2026.",
@@ -117,7 +118,6 @@ var CONTENIDO = {
    {meta:"IAB Argentina · la cámara del sector", h:"Informes y eventos del mercado local", u:"https://www.iabargentina.com.ar/", p:"Publican estudios de inversión publicitaria y consumo digital en Argentina, de descarga libre."}]},
 
  p4:{rot:"Continuidad", t:"¿Puedo seguir estudiando?",
-  clave:"Un título corto no obliga a empezar de cero: hay casas de estudio que reconocen lo ya cursado.",
   items:[
    {meta:"Diplomatura", h:"UNC · Comercio Electrónico y Marketing Digital", u:"https://www.unc.edu.ar/agenda/diplomatura-en-comercio-electr%C3%B3nico-y-marketing-digital", p:"Facultad de Ciencias Económicas."},
    {meta:"Tecnicatura · 2 años · híbrida", h:"Universidad Católica de Córdoba", u:"https://www.ucc.edu.ar/carreras/marketing-digital/", p:"Campus Universitario y Río Cuarto. Con salida a licenciatura."},
@@ -126,10 +126,14 @@ var CONTENIDO = {
   pend:[{h:"Cuánto te reconocen en cada una",p:"El dato que decide. Hay que preguntarlo una por una."}]},
 
  p5:{rot:"Derechos", t:"¿Qué me corresponde?",
-  pend:[{h:"Pasantías: qué es y qué no",p:"Marco legal, duración, carga horaria, asignación estímulo, tutor."},
-        {h:"Primer empleo en relación de dependencia",p:"Período de prueba, recibo, aportes, obra social, vacaciones."},
-        {h:"Trabajar por tu cuenta",p:"Monotributo, categoría inicial, costo por mes, cómo se factura."},
-        {h:"Dónde consultar gratis",p:"Organismos y servicios de consulta laboral, con dirección y teléfono."}]},
+  clave:"Todo lo de acá sale de fuentes oficiales del Estado y se consulta gratis.",
+  items:[
+   {meta:"Ley 26.427 · Sistema de Pasantías Educativas", h:"Qué es una pasantía y qué no", u:"https://www.argentina.gob.ar/justicia/derechofacil/leysimple/pasantias-educativas", p:"Dura de 2 a 12 meses y se puede renovar 6 más. Máximo 6,5 horas por día y 20 por semana, de lunes a viernes. Te corresponde una asignación estímulo calculada sobre el básico del convenio, proporcional a tus horas. No es una relación laboral: si te piden más horas o tareas de un puesto, dejó de ser una pasantía."},
+   {meta:"Ministerio de Trabajo · Conocé tus derechos", h:"Primer empleo en relación de dependencia", u:"https://www.argentina.gob.ar/trabajo/buscastrabajo/conocetusderechos/marcolegal", p:"Los primeros 3 meses son período de prueba, y durante ese tiempo el empleador igual está obligado a registrarte. Cualquiera de los dos puede terminar la relación sin indemnización, pero con preaviso."},
+   {meta:"Ministerio de Trabajo · Salario", h:"El recibo de sueldo no es opcional", u:"https://www.argentina.gob.ar/trabajo/buscastrabajo/conocetusderechos/salario", p:"Se pague como se pague, el empleador siempre tiene que darte recibo, por duplicado, con sus datos, los tuyos y el detalle de lo que cobrás."},
+   {meta:"ARCA · trámite gratuito y virtual", h:"Trabajar por tu cuenta: darte de alta en monotributo", u:"https://www.argentina.gob.ar/servicio/inscribirme-como-monotributista", p:"El alta es 100 % gratis y online. El propio sistema simula qué categoría te toca y cuánto pagarías por mes según lo que facturás, así que el número lo mirás ahí y está siempre actualizado."},
+   {meta:"Rivadavia 646, Córdoba · lunes a viernes de 8 a 14", h:"Consulta laboral gratuita, sin turno previo", u:"https://minjus.cba.gov.ar/index.php/trabajo/", p:"La Secretaría de Trabajo de la Provincia atiende a cualquier trabajador del sector privado con abogados laborales, gratis y sin pedir turno. Tiene 22 sedes en el interior. Teléfono 0351 4341528."},
+   {meta:"Programa Asistir · nacional", h:"Asesoramiento jurídico gratuito para trabajadores", u:"https://www.argentina.gob.ar/servicio/solicitar-asesoramiento-juridico-gratuito-para-trabajadores-asistir", p:"La vía nacional, si lo tuyo no se resuelve en la provincia."}]},
 
  p6:{rot:"Información", t:"¿A quién le pregunto?",
   clave:"En las carreras nuevas la información no está escrita en ningún lado: circula entre quien pregunta y quien contesta.",
@@ -155,6 +159,9 @@ document.querySelectorAll('.ficha').forEach(function(f){
     h+='<p class="rot">'+esc(c.rot)+'</p><h2>'+esc(c.t)+'</h2>';
     if(c.clave) h+='<p class="clave">'+esc(c.clave)+'</p>';
     (c.items||[]).forEach(function(i){
+      h+='<div class="item"><p class="meta">'+esc(i.meta)+'</p><h3>'+(i.u?'<a href="'+i.u+'" target="_blank" rel="noopener">'+esc(i.h)+'</a>':esc(i.h))+'</h3><p>'+esc(i.p)+'</p></div>';
+    });
+    (c.items2||[]).forEach(function(i){
       h+='<div class="item"><p class="meta">'+esc(i.meta)+'</p><h3>'+(i.u?'<a href="'+i.u+'" target="_blank" rel="noopener">'+esc(i.h)+'</a>':esc(i.h))+'</h3><p>'+esc(i.p)+'</p></div>';
     });
     (c.listas||[]).forEach(function(g){
