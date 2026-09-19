@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preguntas del egreso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--noche:#12213D;--papel:#F7F5F1;--acento:#C2571F;--tenue:#5B6880;--linea:#D8D2C7;--claro:#EDEFF4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--noche);
+  font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:18px;line-height:1.55}
+.membrete{background:var(--noche);color:var(--claro);padding:13px 24px;
+  font-size:.64rem;letter-spacing:.17em;text-transform:uppercase;line-height:1.8;border-bottom:3px solid var(--acento)}
+.membrete b{font-weight:700;display:block}
+.marco{max-width:70rem;margin:0 auto;padding:clamp(2.2rem,5vw,3.6rem) 24px clamp(3rem,6vw,5rem)}
+.encabezado{margin:0 0 clamp(1.8rem,4vw,2.8rem);max-width:34rem}
+h1{font-size:clamp(2rem,5vw,2.9rem);line-height:1.05;margin:0 0 .7rem;letter-spacing:-.025em}
+.encabezado p{margin:0;color:var(--tenue);font-size:1.02rem}
+
+/* mosaico: al menos tres tamaños distintos */
+.tablero{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.ficha{grid-column:span 2;background:#fff;border:1px solid var(--linea);padding:1.5rem 1.4rem;
+  display:flex;flex-direction:column;gap:.55rem;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.ficha:hover{border-color:var(--noche)}
+.ficha:focus-visible{outline:2px solid var(--acento);outline-offset:2px}
+.ficha.grande{grid-column:span 4;background:var(--noche);color:var(--claro);border-color:var(--noche)}
+.ficha.ancha{grid-column:span 3}
+.ficha .rot{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acento);font-weight:700}
+.ficha.grande .rot{color:#F0B48A}
+.ficha .q{font-size:clamp(1.1rem,2.2vw,1.42rem);line-height:1.2;font-weight:700;letter-spacing:-.015em;margin:0}
+.ficha.grande .q{font-size:clamp(1.5rem,3vw,2.1rem)}
+.ficha .cuenta{margin-top:auto;padding-top:.7rem;font-size:.76rem;color:var(--tenue)}
+.ficha.grande .cuenta{color:#98A6BD}
+@media(max-width:860px){.tablero{grid-template-columns:repeat(2,1fr)}
+  .ficha,.ficha.ancha{grid-column:span 1}.ficha.grande{grid-column:span 2}}
+
+/* panel */
+dialog{border:0;padding:0;max-width:46rem;width:calc(100% - 32px);background:var(--papel);color:var(--noche)}
+dialog::backdrop{background:rgba(18,33,61,.72)}
+.panel{padding:clamp(1.8rem,4vw,2.6rem)}
+.panel .rot{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acento);font-weight:700;margin:0 0 .5rem}
+.panel h2{font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.15;margin:0 0 1rem;letter-spacing:-.02em}
+.clave{font-size:1.05rem;border-left:3px solid var(--acento);padding-left:1rem;margin:0 0 1.6rem}
+.item{border-top:1px solid var(--linea);padding:.95rem 0 0;margin:0 0 .95rem}
+.item .meta{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--tenue);font-weight:700;margin:0 0 .2rem}
+.item h3{font-size:1.02rem;margin:0 0 .25rem;line-height:1.3}
+.item h3 a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(194,87,31,.5)}
+.item h3 a:hover{text-decoration-color:var(--acento)}
+.item p{margin:0;font-size:.9rem;color:var(--tenue)}
+.pend{border-left:3px solid var(--linea);padding:.1rem 0 .1rem 1rem;margin:0 0 .95rem}
+.pend .meta{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tenue);font-weight:700;margin:0 0 .15rem}
+.pend h3{font-size:1rem;margin:0 0 .2rem}.pend p{margin:0;font-size:.88rem;color:var(--tenue)}
+.cerrar{position:sticky;top:0;width:100%;background:var(--noche);color:var(--claro);border:0;
+  font:inherit;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  padding:.85rem 1.4rem;text-align:right;cursor:pointer}
+.pie{max-width:70rem;margin:0 auto;padding:1.6rem 24px 3rem;border-top:1px solid var(--linea);
+  font-size:.8rem;color:var(--tenue);line-height:1.6}
+.pie b{color:var(--noche)}
+</style>
+</head>
+<body>
+<div class="membrete"><b>Universidad Nacional de Córdoba</b>Facultad de Psicología · Cátedra de Orientación Vocacional y Ocupacional</div>
+
+<div class="marco">
+  <div class="encabezado">
+    <h1>Las preguntas del egreso</h1>
+    <p>Información para estudiantes que están terminando una carrera digital. Cada pregunta abre sus recursos.</p>
+  </div>
+
+  <div class="tablero">
+    <button class="ficha grande" data-p="p1"><span class="rot">Especialización</span><p class="q">¿De qué voy a trabajar, si sé de todo un poco?</p><span class="cuenta">3 formatos comparados · 3 recursos</span></button>
+    <button class="ficha" data-p="p2"><span class="rot">Práctica</span><p class="q">¿Dónde consigo experiencia?</p><span class="cuenta">5 programas en Córdoba</span></button>
+    <button class="ficha ancha" data-p="p3"><span class="rot">Actualización</span><p class="q">¿Qué cambió mientras cursaba?</p><span class="cuenta">5 novedades con fuente</span></button>
+    <button class="ficha ancha" data-p="p4"><span class="rot">Continuidad</span><p class="q">¿Puedo seguir estudiando?</p><span class="cuenta">4 casas de estudio en Córdoba</span></button>
+    <button class="ficha" data-p="p5"><span class="rot">Derechos</span><p class="q">¿Qué me corresponde?</p><span class="cuenta">4 temas</span></button>
+    <button class="ficha" data-p="p6"><span class="rot">Información</span><p class="q">¿A quién le pregunto?</p><span class="cuenta">11 preguntas, 3 destinatarios</span></button>
+  </div>
+</div>
+
+<div class="pie">
+  <b>Berth Pereyra, Juana · Esber Strien, Matías · Pemé Costa, María Catalina</b> — estudiantes de 5.º año de Lic. en Psicología. Práctica de la Cátedra de Orientación Vocacional y Ocupacional, Facultad de Psicología, UNC. <b>Este dispositivo no podrá ser utilizado para otros fines que la evaluación académica de nuestra práctica.</b> Profesora: Lopresti, Gisela — 2026.
+</div>
+
+<dialog id="dlg"><button class="cerrar" id="cerrar">Cerrar ✕</button><div class="panel" id="panel"></div></dialog>
+
+<script>
+var CONTENIDO = {
+ p1:{rot:"Especialización", t:"¿De qué voy a trabajar, si sé de todo un poco?",
+  clave:"La rama en la que se quiere trabajar y aquella por la que se entra no suelen coincidir. Se entra por donde hay lugar y se corrige después.",
+  items:[
+   {meta:"En una agencia", h:"Rol acotado, muchos clientes", p:"Se trabaja sobre una parte definida del proceso y para varias marcas a la vez. Se gana profundidad en una tarea y se pierde vista del conjunto."},
+   {meta:"En una empresa", h:"Alcance amplio, una sola marca", p:"El área interna suele ser chica y cada persona toca varias tareas. Se ve el proceso completo, siempre sobre el mismo producto."},
+   {meta:"Por tu cuenta", h:"Se elige el trabajo, y no hay equipo", p:"Mayor libertad para elegir proyectos y clientes, sin la estructura ni el aprendizaje que da trabajar con otros."}],
+  pend:[{h:"Las ramas concretas",p:"Qué se hace en cada una un martes cualquiera."},
+        {h:"Cómo se prueba una rama",p:"Antes de comprometer un año."},
+        {h:"Cómo te presentás sin recorrido",p:"Qué cuenta como antecedente."}]},
+
+ p2:{rot:"Práctica", t:"¿Dónde consigo experiencia?",
+  clave:"La experiencia se pide antes de tenerla. Estas son las vías que no dependen de que a uno lo elijan.",
+  items:[
+   {meta:"12 meses · part time · 3.º y 4.º año", h:"Arcor · Programa de Pasantías", u:"https://www.arcor.com/ar/rrhh-programa-de-pasantias", p:"Marketing y Comercialización están entre las carreras que piden. Plantas en Córdoba capital, Arroyito, Colonia Caroya y Totoral."},
+   {meta:"6 meses · híbrido · a un año de recibirte", h:"Naranja X · Talento GO", u:"https://infonegocios.info/y-ademas/naranja-x-busca-universitarios-para-la-3a-edicion-de-talento-go-su-programa-de-pasantias", p:"Empresa cordobesa. Cualquier carrera universitaria. Se postula por LinkedIn."},
+   {meta:"6 meses renovables · 20 h semanales", h:"Volkswagen Argentina", u:"https://www.grupociadetalentos.com/volkswagen2019/", p:"Marketing está entre las carreras que piden."},
+   {meta:"Convocatoria nacional, con búsquedas en Córdoba", h:"Techint · Jóvenes Profesionales", u:"https://www.iprofesional.com/management/424265-5-pasantias-en-grandes-empresas-de-argentina-para-aplicar-hoy-mismo", p:"Hacen giras por el país."},
+   {meta:"Más de 13.500 estudiantes por año", h:"Programa de Pasantías del Gobierno de Córdoba", u:"https://prensa.cba.gov.ar/informacion-general/pasantias-mas-de-9-000-alumnos-cordobeses-tienen-su-primera-su-experiencia-laboral/", p:"El canal por el que las empresas chicas toman pasantes sin programa propio."}],
+  nota:"Varios de estos programas piden carrera universitaria, no tecnicatura. Chequealo en las bases de cada edición."},
+
+ p3:{rot:"Actualización", t:"¿Qué cambió mientras cursaba?",
+  clave:"Sólo entran instituciones, medios y organismos validados. Corte al 19 de septiembre de 2026.",
+  items:[
+   {meta:"Harvard Business Review · feb. 2026", h:"La IA está dando vuelta al marketing en dos frentes", u:"https://hbr.org/2026/02/ai-is-upending-marketing-on-two-fronts?language=es", p:"La IA conversacional desplaza al sitio web y al buscador como puerta de entrada."},
+   {meta:"Gartner · 2026", h:"Cinco tendencias y predicciones para 2026", u:"https://www.gartner.com/en/articles/future-of-marketing", p:"Los agentes de IA empiezan a comprar en nombre de las personas."},
+   {meta:"IAB · State of Data 2026", h:"La transformación de la medición con IA", u:"https://www.iab.com/insights/2026-state-of-data-report/", p:"Deja a la vista debilidades que la industria arrastraba."},
+   {meta:"Nielsen · 2026", h:"La búsqueda y el descubrimiento pasan por IA", u:"https://www.nielsen.com/news-center/2026/gen-alpha-leads-shift-to-ai-powered-entertainment-search-discovery-and-recommendations/", p:"66 % usa más chatbots que hace año y medio; 80 % en la generación más joven."},
+   {meta:"Think with Google", h:"Tendencias de IA en marketing", u:"https://www.thinkwithgoogle.com/intl/es-es/estrategias-de-marketing/automatizacion/tendencias-inteligencia-artificial-marketing/", p:"En castellano y gratis."}]},
+
+ p4:{rot:"Continuidad", t:"¿Puedo seguir estudiando?",
+  clave:"Un título corto no obliga a empezar de cero: hay casas de estudio que reconocen lo ya cursado.",
+  items:[
+   {meta:"Diplomatura", h:"UNC · Comercio Electrónico y Marketing Digital", u:"https://www.unc.edu.ar/agenda/diplomatura-en-comercio-electr%C3%B3nico-y-marketing-digital", p:"Facultad de Ciencias Económicas."},
+   {meta:"Tecnicatura · 2 años · híbrida", h:"Universidad Católica de Córdoba", u:"https://www.ucc.edu.ar/carreras/marketing-digital/", p:"Campus Universitario y Río Cuarto. Con salida a licenciatura."},
+   {meta:"Tecnicatura universitaria", h:"Universidad Provincial de Córdoba", u:"https://www.upc.edu.ar/carreras/tecnicatura-universitaria-en-marketing-y-negocios-digitales/", p:"Marketing y Negocios Digitales."},
+   {meta:"Licenciatura · presencial", h:"Universidad Blas Pascal", u:"https://www.educaweb.com/carreras-universitarias-de/grado-marketing/cordoba/", p:"Carrera de grado completa."}],
+  pend:[{h:"Cuánto te reconocen en cada una",p:"El dato que decide. Hay que preguntarlo una por una."}]},
+
+ p5:{rot:"Derechos", t:"¿Qué me corresponde?",
+  clave:"Empezar de manera informal es lo más común. Conviene saber qué se está resignando.",
+  pend:[{h:"Pasantías: qué es y qué no",p:"Marco legal, duración, carga horaria, asignación estímulo, tutor."},
+        {h:"Primer empleo en relación de dependencia",p:"Período de prueba, recibo, aportes, obra social, vacaciones."},
+        {h:"Trabajar por tu cuenta",p:"Monotributo, categoría inicial, costo por mes, cómo se factura."},
+        {h:"Dónde consultar gratis",p:"Organismos y servicios de consulta laboral, con dirección y teléfono."}]},
+
+ p6:{rot:"Información", t:"¿A quién le pregunto?",
+  clave:"En las carreras nuevas la información no está escrita en ningún lado: circula entre quien pregunta y quien contesta.",
+  listas:[
+   {t:"Donde estudiás", l:["¿Hay área de pasantías o vinculación con empresas? ¿Quién decide?",
+     "¿Hay convenios con universidades? ¿Qué me reconocen?",
+     "¿Hay cursos de actualización? ¿Puedo hacerlos ya?",
+     "Las prácticas de las materias, ¿tienen tutor? ¿Quién es el mío?",
+     "¿Hay alguien a cargo de acompañar el egreso, o depende de a quién pregunte?"]},
+   {t:"A quien ya egresó", l:["¿Cuánto tardaste en conseguir el primer trabajo y cómo?",
+     "¿En qué terminaste trabajando y cuánto se parece a lo que querías?",
+     "¿Qué materia te sirvió y cuál no?"]},
+   {t:"A quien contrata", l:["¿Qué mirás primero en alguien recién recibido?",
+     "¿Qué pesa más: el título, lo que muestro o con quién trabajé?",
+     "¿Tomás gente sin experiencia? ¿En qué condiciones?"]}]}
+};
+
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
+var dlg=document.getElementById('dlg'), panel=document.getElementById('panel');
+document.querySelectorAll('.ficha').forEach(function(f){
+  f.addEventListener('click',function(){
+    var c=CONTENIDO[f.dataset.p], h='';
+    h+='<p class="rot">'+esc(c.rot)+'</p><h2>'+esc(c.t)+'</h2>';
+    if(c.clave) h+='<p class="clave">'+esc(c.clave)+'</p>';
+    (c.items||[]).forEach(function(i){
+      h+='<div class="item"><p class="meta">'+esc(i.meta)+'</p><h3>'+(i.u?'<a href="'+i.u+'" target="_blank" rel="noopener">'+esc(i.h)+'</a>':esc(i.h))+'</h3><p>'+esc(i.p)+'</p></div>';
+    });
+    (c.listas||[]).forEach(function(g){
+      h+='<div class="item"><p class="meta">'+esc(g.t)+'</p><ul style="margin:.4rem 0 0;padding-left:1.1rem">'+
+         g.l.map(function(x){return '<li style="margin-bottom:.35rem;font-size:.95rem">'+esc(x)+'</li>'}).join('')+'</ul></div>';
+    });
+    (c.citas||[]).forEach(function(q){
+      h+='<div class="item"><h3 style="font-weight:400;font-size:1.06rem">'+esc(q[0])+'</h3><p>'+esc(q[1])+'</p></div>';
+    });
+    (c.pend||[]).forEach(function(x){
+      h+='<div class="pend"><p class="meta">A cargar</p><h3>'+esc(x.h)+'</h3><p>'+esc(x.p)+'</p></div>';
+    });
+    if(c.nota) h+='<p class="clave" style="margin-top:1.4rem">'+esc(c.nota)+'</p>';
+    panel.innerHTML=h; dlg.showModal();
+  });
+});
+document.getElementById('cerrar').addEventListener('click',function(){dlg.close()});
+dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+</script>
+</body>
+</html>
