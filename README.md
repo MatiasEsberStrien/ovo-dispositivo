@@ -1,4 +1,4 @@
-# Las preguntas del egreso
+# Del último año al primer trabajo
 
 Dispositivo de información vocacional ocupacional.
 Práctica de la Cátedra de Orientación Vocacional y Ocupacional — Facultad de Psicología, Universidad Nacional de Córdoba. 2026.
