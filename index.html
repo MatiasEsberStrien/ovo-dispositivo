@@ -72,6 +72,12 @@ dialog::backdrop{background:rgba(18,33,61,.72)}
 .pie{max-width:70rem;margin:0 auto;padding:1.6rem 24px 3rem;border-top:1px solid var(--linea);
   font-size:.8rem;color:var(--tenue);line-height:1.6}
 .pie b{color:var(--noche)}
+.voz{display:flex;gap:14px;align-items:flex-start;background:var(--claro);border-left:3px solid var(--acento);padding:14px 16px;margin:0 0 1.6rem}
+.voz button{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:0;background:var(--noche);color:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.voz button:focus-visible{outline:2px solid var(--acento);outline-offset:2px}
+.voz p{margin:0;font-size:1rem;line-height:1.5}
+.voz .et{display:block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acento);font-weight:700;margin-bottom:.2rem}
+.encabezado .voz{margin:1.4rem 0 0}
 </style>
 </head>
 <body>
@@ -81,6 +87,7 @@ dialog::backdrop{background:rgba(18,33,61,.72)}
   <div class="encabezado">
     <h1>Del último año al primer trabajo</h1>
     <p>Para quienes están en el <b>último tramo de una carrera</b> —universitaria o terciaria, del campo que sea— o acaban de recibirse. Las preguntas más recurrentes sobre los primeros pasos en el trabajo, con información general y recursos de Córdoba y del país.</p>
+    <div class="voz"><button type="button" data-a="bienvenida" aria-label="Escuchar la bienvenida">▶</button><p><span class="et">Escuchá</span>Hola. Si estás terminando la carrera o te acabás de recibir, este espacio es para vos. Acá reunimos las preguntas que más aparecen en ese momento, cada una con información y recursos verificados. Elegí la que te resuene primero: no hace falta seguir un orden.</p></div>
   </div>
 
   <div class="tablero">
@@ -167,12 +174,14 @@ var CONTENIDO = {
   nota:"Para pensar en grupo: ¿qué lugar querés que ocupe el trabajo en tus próximos dos años? ¿Qué otras cosas querés que entren?"}
 };
 
+var VOZ = {"p1": "No hay una sola forma de trabajar de lo tuyo. Antes de elegir, pensá qué estabilidad necesitás, cuánta autonomía querés y qué te pide cada camino. Y no es para siempre: muchas personas combinan más de una.", "p2": "Que te pidan experiencia para tu primer trabajo es de las quejas más comunes. Estos programas existen justamente para eso: mirá los requisitos y anotate en más de uno.", "p3": "No hace falta saberlo todo. Elegí una herramienta que se use en tu campo y empezá por ahí: estos cursos son gratuitos y los podés hacer a tu ritmo.", "p4": "Seguir estudiando también es una decisión sobre tu trabajo. Antes de inscribirte, preguntate para qué: si querés profundizar en lo tuyo, cambiar de rumbo o sumar una credencial.", "p5": "Conocer tus derechos te cuida desde el primer día. Si algo de tu trabajo no te cierra, no te quedes con la duda: el asesoramiento laboral es gratuito."};
 function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
 var dlg=document.getElementById('dlg'), panel=document.getElementById('panel');
 document.querySelectorAll('.ficha').forEach(function(f){
   f.addEventListener('click',function(){
     var c=CONTENIDO[f.dataset.p], h='';
     h+='<p class="rot">'+esc(c.rot)+'</p><h2>'+esc(c.t)+'</h2>';
+    if(VOZ[f.dataset.p]) h+='<div class="voz"><button type="button" data-a="'+f.dataset.p+'" aria-label="Escuchar">▶</button><p><span class="et">Escuchá</span>'+esc(VOZ[f.dataset.p])+'</p></div>';
     if(c.clave) h+='<p class="clave">'+esc(c.clave)+'</p>';
     (c.items||[]).forEach(function(i){
       h+='<div class="item"><p class="meta">'+esc(i.meta)+'</p><h3>'+(i.u?'<a href="'+i.u+'" target="_blank" rel="noopener">'+esc(i.h)+'</a>':esc(i.h))+'</h3><p>'+esc(i.p)+'</p></div>';
@@ -191,10 +200,21 @@ document.querySelectorAll('.ficha').forEach(function(f){
       h+='<div class="pend"><p class="meta">A cargar</p><h3>'+esc(x.h)+'</h3><p>'+esc(x.p)+'</p></div>';
     });
     if(c.nota) h+='<p class="clave" style="margin-top:1.4rem">'+esc(c.nota)+'</p>';
+    if(window.parar) parar();
     panel.innerHTML=h; dlg.showModal();
   });
 });
 document.getElementById('cerrar').addEventListener('click',function(){dlg.close()});
+var sonido=new Audio(), boton=null;
+window.parar=function(){sonido.pause();if(boton){boton.textContent='▶';boton=null}}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.voz button'); if(!b) return;
+  if(boton===b){parar();return}
+  parar(); sonido.src='audio/'+b.dataset.a+'.mp3'; sonido.currentTime=0;
+  sonido.play().then(function(){boton=b;b.textContent='❚❚'}).catch(function(){});
+});
+sonido.addEventListener('ended',function(){parar()});
+dlg.addEventListener('close',function(){parar()});
 dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
 </script>
 </body>
