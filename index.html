@@ -19,6 +19,11 @@ body{margin:0;background:var(--papel);color:var(--noche);
 .membrete{background:var(--noche);color:var(--claro);padding:13px 24px;
   font-size:.64rem;letter-spacing:.17em;text-transform:uppercase;line-height:1.8;border-bottom:3px solid var(--acento)}
 .membrete b{font-weight:700;display:block}
+.membrete{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logos{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.logos img{display:block;height:40px;width:auto}
+.logos .sep{width:1px;height:28px;background:rgba(255,255,255,.35)}
+@media (max-width:640px){.membrete{flex-direction:column;align-items:flex-start;gap:10px}.logos img{height:26px}.logos .sep{height:22px}}
 .marco{max-width:70rem;margin:0 auto;padding:clamp(2.2rem,5vw,3.6rem) 24px clamp(3rem,6vw,5rem)}
 .encabezado{margin:0 0 clamp(1.8rem,4vw,2.8rem);max-width:38rem}
 h1{font-size:clamp(2rem,5vw,2.9rem);line-height:1.05;margin:0 0 .7rem;letter-spacing:-.025em}
@@ -70,12 +75,12 @@ dialog::backdrop{background:rgba(18,33,61,.72)}
 </style>
 </head>
 <body>
-<div class="membrete"><b>Universidad Nacional de Córdoba</b>Facultad de Psicología · Cátedra de Orientación Vocacional y Ocupacional</div>
+<div class="membrete"><div><b>Universidad Nacional de Córdoba</b>Facultad de Psicología · Cátedra de Orientación Vocacional y Ocupacional</div><div class="logos"><img src="img/logo-unc.svg" alt="Universidad Nacional de Córdoba"><span class="sep" aria-hidden="true"></span><img src="img/logo-psicologia.png" alt="Facultad de Psicología"></div></div>
 
 <div class="marco">
   <div class="encabezado">
     <h1>Del último año al primer trabajo</h1>
-    <p>Para quienes están en el <b>último tramo de una carrera</b> —universitaria o terciaria, del campo que sea— o acaban de recibirse. Las preguntas de siempre sobre los primeros pasos en el trabajo, con información general y recursos de Córdoba y del país. Cada pregunta abre sus recursos.</p>
+    <p>Para quienes están en el <b>último tramo de una carrera</b> —universitaria o terciaria, del campo que sea— o acaban de recibirse. Las preguntas más recurrentes sobre los primeros pasos en el trabajo, con información general y recursos de Córdoba y del país. Cada pregunta abre sus recursos.</p>
   </div>
 
   <div class="tablero">
