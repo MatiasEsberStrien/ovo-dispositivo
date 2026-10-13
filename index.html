@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carreras nuevas, preguntas viejas</title>
+<title>Del último año al primer trabajo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -56,6 +56,10 @@ dialog::backdrop{background:rgba(18,33,61,.72)}
 .cerrar{position:sticky;top:0;width:100%;background:var(--noche);color:var(--claro);border:0;
   font:inherit;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
   padding:.85rem 1.4rem;text-align:right;cursor:pointer}
+.taller{margin-top:clamp(2.4rem,5vw,3.6rem);border-top:3px solid var(--noche);padding-top:1.6rem;max-width:46rem}
+.taller .rot{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acento);font-weight:700;margin:0 0 .4rem}
+.taller h2{font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.15;margin:0 0 1rem;letter-spacing:-.02em}
+.momentos{margin:0;padding-left:1.2rem}.momentos li{margin:0 0 .9rem;font-size:.98rem}
 .pie{max-width:70rem;margin:0 auto;padding:1.6rem 24px 3rem;border-top:1px solid var(--linea);
   font-size:.8rem;color:var(--tenue);line-height:1.6}
 .pie b{color:var(--noche)}
@@ -66,18 +70,31 @@ dialog::backdrop{background:rgba(18,33,61,.72)}
 
 <div class="marco">
   <div class="encabezado">
-    <h1>Carreras nuevas, preguntas viejas</h1>
-    <p>Estás terminando una <b>carrera que hace diez años no existía</b>. Nadie de tu familia la hizo, no hay un camino trazado, y las primeras camadas de egresados se cuentan con los dedos. Cada pregunta abre sus recursos.</p>
+    <h1>Del último año al primer trabajo</h1>
+    <p>Para quienes están en el <b>último tramo de una carrera corta del campo digital</b> —marketing, comunicación, contenidos— o acaban de recibirse. Las preguntas de siempre sobre la inserción laboral, con respuestas para este campo y para Córdoba. Cada pregunta abre sus recursos.</p>
   </div>
 
   <div class="tablero">
     <button class="ficha grande" data-p="p1"><span class="rot">Especialización</span><p class="q">¿De qué voy a trabajar, si sé de todo un poco?</p><span class="cuenta">3 formatos comparados · 3 recursos</span></button>
     <button class="ficha" data-p="p2"><span class="rot">Práctica</span><p class="q">¿Dónde consigo experiencia?</p><span class="cuenta">5 programas en Córdoba</span></button>
     <button class="ficha ancha" data-p="p3"><span class="rot">Actualización</span><p class="q">¿Qué cambió mientras cursaba?</p><span class="cuenta">5 novedades con fuente</span></button>
-    <button class="ficha ancha" data-p="p4"><span class="rot">Continuidad</span><p class="q">¿Puedo seguir estudiando?</p><span class="cuenta">4 casas de estudio en Córdoba</span></button>
+    <button class="ficha ancha" data-p="p4"><span class="rot">Continuidad</span><p class="q">¿Puedo seguir estudiando?</p><span class="cuenta">2 opciones públicas en Córdoba</span></button>
     <button class="ficha" data-p="p5"><span class="rot">Derechos</span><p class="q">¿Qué me corresponde?</p><span class="cuenta">6 temas, con fuente oficial</span></button>
     <button class="ficha" data-p="p6"><span class="rot">Información</span><p class="q">¿A quién le pregunto?</p><span class="cuenta">11 preguntas, 3 destinatarios</span></button>
+    <button class="ficha" data-p="p7"><span class="rot">Proyecto de vida</span><p class="q">¿Y si todavía no sé si quiero esto?</p><span class="cuenta">5 caminos posibles · para pensar en grupo</span></button>
   </div>
+
+  <section class="taller" aria-labelledby="t-taller">
+    <p class="rot">Para quien coordina</p>
+    <h2 id="t-taller">Cómo se usa en una jornada de información</h2>
+    <p class="clave">El tablero se puede recorrer solo, pero está pensado para un taller de 60 a 90 minutos con un grupo de estudiantes del último tramo. La persona orientadora no da respuestas: acompaña la lectura de la información y la vuelve pregunta propia.</p>
+    <ol class="momentos">
+      <li><b>Apertura · 15 min.</b> Cada participante escribe, sin mostrarla, la pregunta que hoy le genera más incertidumbre sobre el egreso. Se leen en voz alta y se ubican en las tarjetas del tablero. Las que no entran en ninguna se anotan aparte: son información que falta.</li>
+      <li><b>Exploración · 30 a 40 min.</b> En subgrupos de tres o cuatro, cada uno toma dos tarjetas: las abre, sigue al menos un enlace y trae una respuesta concreta (un requisito, una fecha, un derecho) y una duda nueva. La persona orientadora circula y pregunta qué de lo leído les sirve y qué no, y por qué.</li>
+      <li><b>Puesta en común · 20 min.</b> Cada subgrupo cuenta lo que encontró. Se vuelve a las preguntas de la apertura: cuáles se respondieron, cuáles cambiaron y cuáles necesitan otra fuente. La tarjeta «¿A quién le pregunto?» sirve para que cada uno se lleve a quién ir a buscar.</li>
+      <li><b>Cierre · 10 min.</b> Con la tarjeta «¿Y si todavía no sé si quiero esto?», una ronda breve: qué lugar ocupa el trabajo en lo que cada uno se imagina para los próximos dos años. No hay respuesta correcta.</li>
+    </ol>
+  </section>
 </div>
 
 <div class="pie">
@@ -120,9 +137,9 @@ var CONTENIDO = {
  p4:{rot:"Continuidad", t:"¿Puedo seguir estudiando?",
   items:[
    {meta:"Diplomatura", h:"UNC · Comercio Electrónico y Marketing Digital", u:"https://www.unc.edu.ar/agenda/diplomatura-en-comercio-electr%C3%B3nico-y-marketing-digital", p:"Facultad de Ciencias Económicas."},
-   {meta:"Tecnicatura · 2 años · híbrida", h:"Universidad Católica de Córdoba", u:"https://www.ucc.edu.ar/carreras/marketing-digital/", p:"Campus Universitario y Río Cuarto. Con salida a licenciatura."},
-   {meta:"Tecnicatura universitaria", h:"Universidad Provincial de Córdoba", u:"https://www.upc.edu.ar/carreras/tecnicatura-universitaria-en-marketing-y-negocios-digitales/", p:"Marketing y Negocios Digitales."},
-   {meta:"Licenciatura · presencial", h:"Universidad Blas Pascal", u:"https://www.ubp.edu.ar/", p:"Licenciatura en Marketing, carrera de grado completa."}]},
+   {meta:"Tecnicatura universitaria", h:"Universidad Provincial de Córdoba", u:"https://www.upc.edu.ar/carreras/tecnicatura-universitaria-en-marketing-y-negocios-digitales/", p:"Marketing y Negocios Digitales."}
+   ],
+  nota:"Sólo entran opciones de universidades públicas. La oferta privada existe, pero tiene costo: la consultás directamente en cada institución."},
 
  p5:{rot:"Derechos", t:"¿Qué me corresponde?",
   clave:"Todo lo de acá sale de fuentes oficiales del Estado y se consulta gratis.",
@@ -135,7 +152,7 @@ var CONTENIDO = {
    {meta:"Programa Asistir · nacional", h:"Asesoramiento jurídico gratuito para trabajadores", u:"https://www.argentina.gob.ar/servicio/solicitar-asesoramiento-juridico-gratuito-para-trabajadores-asistir", p:"La vía nacional, si lo tuyo no se resuelve en la provincia."}]},
 
  p6:{rot:"Información", t:"¿A quién le pregunto?",
-  clave:"En las carreras nuevas la información no está escrita en ningún lado: circula entre quien pregunta y quien contesta.",
+  clave:"En el campo digital buena parte de la información no está escrita en ningún lado: circula entre quien pregunta y quien contesta.",
   listas:[
    {t:"Donde estudiás", l:["¿Hay área de pasantías o vinculación con empresas? ¿Quién decide?",
      "¿Hay convenios con universidades? ¿Qué me reconocen?",
@@ -147,7 +164,17 @@ var CONTENIDO = {
      "¿Qué materia te sirvió y cuál no?"]},
    {t:"A quien contrata", l:["¿Qué mirás primero en alguien recién recibido?",
      "¿Qué pesa más: el título, lo que muestro o con quién trabajé?",
-     "¿Tomás gente sin experiencia? ¿En qué condiciones?"]}]}
+     "¿Tomás gente sin experiencia? ¿En qué condiciones?"]}]},
+
+ p7:{rot:"Proyecto de vida", t:"¿Y si todavía no sé si quiero esto?",
+  clave:"Recibirse no obliga a entrar ya a trabajar de lo que se estudió. El trabajo es una parte del proyecto de vida, no el proyecto entero, y el proyecto se puede revisar.",
+  items:[
+   {meta:"Seguir formándose", h:"Estudiar otra cosa, o algo complementario", p:"Hay quien suma una formación de otro campo y arma un perfil propio. La tarjeta «¿Puedo seguir estudiando?» muestra opciones públicas."},
+   {meta:"Trabajar de otra cosa, por un tiempo", h:"Un trabajo que no es del rubro también es experiencia", p:"Atención al público, ventas o tareas administrativas desarrollan habilidades que después se usan en el campo. No es un retroceso si se elige con un para qué."},
+   {meta:"Participar sin cobrar", h:"Proyectos comunitarios, voluntariados, colectivos", p:"Organizaciones sociales, clubes o proyectos culturales necesitan comunicación y redes. Es una forma de aprender y de armar vínculos fuera del mercado."},
+   {meta:"Emprender", h:"Un proyecto propio, chico, para probar", p:"Empezar chico permite probar si el proyecto funciona antes de dejar otras cosas. Para cobrar hay que estar dado de alta en el monotributo: la tarjeta «¿Qué me corresponde?» explica cómo."},
+   {meta:"Tomarse un tiempo", h:"Una pausa también puede ser una decisión", p:"Viajar, cuidar a alguien, ordenar lo que se quiere. Lo importante es poder pensarlo, no cumplir un calendario ajeno."}],
+  nota:"Para pensar en grupo: ¿qué lugar querés que ocupe el trabajo en tus próximos dos años? ¿Qué otras cosas querés que entren?"}
 };
 
 function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
