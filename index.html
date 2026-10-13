@@ -71,14 +71,14 @@ dialog::backdrop{background:rgba(18,33,61,.72)}
 <div class="marco">
   <div class="encabezado">
     <h1>Del último año al primer trabajo</h1>
-    <p>Para quienes están en el <b>último tramo de una carrera corta del campo digital</b> —marketing, comunicación, contenidos— o acaban de recibirse. Las preguntas de siempre sobre la inserción laboral, con respuestas para este campo y para Córdoba. Cada pregunta abre sus recursos.</p>
+    <p>Para quienes están en el <b>último tramo de una carrera</b> —universitaria o terciaria, del campo que sea— o acaban de recibirse. Las preguntas de siempre sobre los primeros pasos en el trabajo, con información general y recursos de Córdoba y del país. Cada pregunta abre sus recursos.</p>
   </div>
 
   <div class="tablero">
-    <button class="ficha grande" data-p="p1"><span class="rot">Especialización</span><p class="q">¿De qué voy a trabajar, si sé de todo un poco?</p><span class="cuenta">3 formatos comparados · 3 recursos</span></button>
-    <button class="ficha" data-p="p2"><span class="rot">Práctica</span><p class="q">¿Dónde consigo experiencia?</p><span class="cuenta">5 programas en Córdoba</span></button>
-    <button class="ficha ancha" data-p="p3"><span class="rot">Actualización</span><p class="q">¿Qué cambió mientras cursaba?</p><span class="cuenta">5 novedades con fuente</span></button>
-    <button class="ficha ancha" data-p="p4"><span class="rot">Continuidad</span><p class="q">¿Puedo seguir estudiando?</p><span class="cuenta">2 opciones públicas en Córdoba</span></button>
+    <button class="ficha grande" data-p="p1"><span class="rot">Perfil</span><p class="q">¿De qué puedo trabajar con lo que estudié?</p><span class="cuenta">4 formas de trabajar · 3 recursos</span></button>
+    <button class="ficha" data-p="p2"><span class="rot">Práctica</span><p class="q">¿Dónde consigo experiencia?</p><span class="cuenta">5 lugares donde buscar</span></button>
+    <button class="ficha ancha" data-p="p3"><span class="rot">Actualización</span><p class="q">¿Qué cambió mientras cursaba?</p><span class="cuenta">3 fuentes para entender el mercado</span></button>
+    <button class="ficha ancha" data-p="p4"><span class="rot">Continuidad</span><p class="q">¿Puedo seguir estudiando?</p><span class="cuenta">3 puertas de entrada públicas</span></button>
     <button class="ficha" data-p="p5"><span class="rot">Derechos</span><p class="q">¿Qué me corresponde?</p><span class="cuenta">6 temas, con fuente oficial</span></button>
     <button class="ficha" data-p="p6"><span class="rot">Información</span><p class="q">¿A quién le pregunto?</p><span class="cuenta">11 preguntas, 3 destinatarios</span></button>
     <button class="ficha" data-p="p7"><span class="rot">Proyecto de vida</span><p class="q">¿Y si todavía no sé si quiero esto?</p><span class="cuenta">5 caminos posibles · para pensar en grupo</span></button>
@@ -105,41 +105,41 @@ dialog::backdrop{background:rgba(18,33,61,.72)}
 
 <script>
 var CONTENIDO = {
- p1:{rot:"Especialización", t:"¿De qué voy a trabajar, si sé de todo un poco?",
-  clave:"La rama en la que se quiere trabajar y aquella por la que se entra no suelen coincidir. Se entra por donde hay lugar y se corrige después.",
+ p1:{rot:"Perfil", t:"¿De qué puedo trabajar con lo que estudié?",
+  clave:"El primer trabajo pocas veces es el que se imaginaba al empezar la carrera. Se entra por donde hay lugar y se corrige después.",
   items:[
-   {meta:"En una agencia", h:"Rol acotado, muchos clientes", p:"Se trabaja sobre una parte definida del proceso y para varias marcas a la vez. Se gana profundidad en una tarea y se pierde vista del conjunto."},
-   {meta:"En una empresa", h:"Alcance amplio, una sola marca", p:"El área interna suele ser chica y cada persona toca varias tareas. Se ve el proceso completo, siempre sobre el mismo producto."},
-   {meta:"Por tu cuenta", h:"Se elige el trabajo, y no hay equipo", p:"Mayor libertad para elegir proyectos y clientes, sin la estructura ni el aprendizaje que da trabajar con otros."}],
+   {meta:"En relación de dependencia", h:"En una empresa u organización", p:"Un sueldo fijo, un equipo y alguien que enseña el oficio. Se gana estructura y se resigna algo de libertad para elegir qué hacer."},
+   {meta:"En el Estado", h:"Organismos públicos, escuelas, hospitales", p:"Muchas profesiones tienen lugar en lo público. Se suele entrar por concurso o por programas, y los tiempos son más largos."},
+   {meta:"Por tu cuenta", h:"Ejercicio independiente", p:"Se eligen los proyectos y los clientes, sin la estructura ni el aprendizaje que da trabajar con otros. Requiere darse de alta como monotributista."},
+   {meta:"En organizaciones sociales", h:"Fundaciones, cooperativas, asociaciones", p:"Trabajos con un fin comunitario. A veces son la primera experiencia profesional y arman vínculos para lo que viene."}],
   items2:[
-   {meta:"Las ramas del campo", h:"De qué se trabaja, concretamente", p:"Publicidad y pauta · comercio electrónico · contenido y producción audiovisual · redes y comunidad · analítica y datos · posicionamiento en buscadores. Casi nadie hace todas: se entra por una y se suma el resto."},
-   {meta:"HubSpot Academy · gratis, con certificado", h:"Probar una rama sin comprometer un año", u:"https://academy.hubspot.com/es/courses/digital-marketing", p:"Cursos en castellano, gratis, y el certificado no se paga. Sirve para ver si una rama te interesa antes de apostarle."},
-   {meta:"Google Skillshop · gratis", h:"Certificaciones de las plataformas que se usan", u:"https://skillshop.withgoogle.com/", p:"Las certificaciones de Google Ads y Analytics, sin costo. Son las herramientas que aparecen en casi toda búsqueda laboral del rubro."}]},
+   {meta:"Antes de buscar", h:"¿Tu profesión pide matrícula?", p:"Algunas profesiones no se pueden ejercer sin matricularse en el colegio o consejo profesional de la provincia. Averiguarlo antes del primer trabajo evita sorpresas."},
+   {meta:"Ministerio de Capital Humano · gratis", h:"Armar el currículum y preparar la entrevista", u:"https://www.argentina.gob.ar/trabajo/preparate", p:"Qué poner y qué no en el currículum, con modelos, y cómo son los distintos tipos de entrevista laboral."},
+   {meta:"Guía de Carreras Universitarias · oficial", h:"Ver qué más existe en tu campo", u:"https://guiadecarreras.siu.edu.ar/", p:"El buscador nacional de carreras de pregrado, grado y posgrado. Sirve para ver por dónde se puede seguir desde lo que ya estudiaste."}]},
 
  p2:{rot:"Práctica", t:"¿Dónde consigo experiencia?",
-  clave:"Cada link abre directamente donde se completa la postulación. Verificados el 19 de septiembre de 2026.",
+  clave:"Lugares abiertos a estudiantes y recién recibidos de distintas carreras. Verificados el 13 de octubre de 2026.",
   items:[
-   {meta:"12 meses · part time · 3.º y 4.º año", h:"Arcor · postularse al Programa de Pasantías", u:"https://www.arcor.com/ar/rrhh-programa-de-pasantias", p:"Marketing y Comercialización están entre las carreras que toman. Plantas en Córdoba capital, Arroyito, Colonia Caroya y Totoral. El botón «Aplicá» abre el formulario."},
-   {meta:"6 meses · híbrido · a un año de recibirte", h:"Naranja X · ver búsquedas y postularse", u:"https://careers.naranjax.com/", p:"Empresa cordobesa. Programa Talento GO y búsquedas abiertas permanentes. Botón «Postulate acá» en la misma página."},
-   {meta:"6 meses renovables · 20 h semanales", h:"Volkswagen Argentina · vacantes abiertas", u:"https://www.volkswagen.com.ar/app/local/recursos-humanos/vacantes", p:"Listado de posiciones activas con postulación en línea. Marketing está entre las carreras que toman."},
-   {meta:"6 meses · asignación estímulo · 20 h semanales", h:"Plan Primer Paso · inscripción abierta", u:"https://desarrolloyempleo.cba.gov.ar/ppp-soy-postulante-2/", p:"Gobierno de Córdoba. Práctica laboral con asignación estímulo equivalente a un salario mínimo. Se inscribe con tu cuenta CiDi. Compatible con pasantías de estudios terciarios o universitarios."},
-   {meta:"Actualizado todos los días", h:"Búsquedas de nivel inicial en Córdoba", u:"https://www.linkedin.com/jobs/search/?keywords=marketing%20digital&location=C%C3%B3rdoba%2C%20Argentina&f_E=1%2C2", p:"Filtro ya aplicado: marketing digital, Córdoba, nivel inicial y junior. Abre el listado del día."}]},
+   {meta:"Gobierno de Córdoba · 6 meses · 20 h semanales", h:"Plan Primer Paso · inscripción", u:"https://desarrolloyempleo.cba.gov.ar/ppp-soy-postulante-2/", p:"Práctica laboral con asignación estímulo, para jóvenes sin experiencia. Se inscribe con tu cuenta CiDi. Compatible con pasantías de estudios terciarios o universitarios."},
+   {meta:"Nacional · gratis", h:"Portal Empleo · búsquedas y cursos", u:"https://www.portalempleo.gob.ar/", p:"La plataforma pública de empleo. Te registrás con el DNI y un mail, cargás tu perfil y ves búsquedas y capacitaciones."},
+   {meta:"Presencial · gratis", h:"Oficinas de Empleo · la más cercana", u:"https://www.argentina.gob.ar/trabajo/mapa-oficinas", p:"El mapa de las oficinas municipales de empleo. Orientan, toman tu currículum y te conectan con búsquedas de la zona."},
+   {meta:"12 meses · part time · 3.º y 4.º año", h:"Arcor · Programa de Pasantías", u:"https://www.arcor.com/ar/rrhh-programa-de-pasantias", p:"Un ejemplo de pasantía de empresa abierta a muchas carreras: ingenierías, química, sistemas, recursos humanos, psicología, contaduría, administración, marketing, comercio exterior y más."},
+   {meta:"Actualizado todos los días", h:"Pasantías y puestos de inicio en Córdoba", u:"https://www.linkedin.com/jobs/search/?keywords=pasant%C3%ADa&location=C%C3%B3rdoba%2C%20Argentina&f_E=1%2C2", p:"Filtro ya aplicado: pasantías y nivel inicial en Córdoba. Cambiá la palabra clave por tu carrera."}]},
 
  p3:{rot:"Actualización", t:"¿Qué cambió mientras cursaba?",
-  clave:"Todo lo que entra acá es gratis y se lee sin registrarse ni pagar, y viene de instituciones, organismos o medios validados. Verificado el 19 de septiembre de 2026.",
+  clave:"El mercado laboral se mueve mientras se cursa. Todo lo de acá es gratis, de organismos oficiales, y se lee sin registrarse.",
   items:[
-   {meta:"Think with Google · en castellano", h:"Cómo transformará la IA la compra y la planificación de medios", u:"https://www.thinkwithgoogle.com/intl/es-es/estrategias-de-marketing/datos-y-medicion/ia-transformacion-compra-medios/", p:"Qué cambia cuando las plataformas deciden solas dónde va cada peso de pauta."},
-   {meta:"Think with Google · en castellano", h:"El impacto de la IA en los negocios y en nuestras vidas", u:"https://www.thinkwithgoogle.com/intl/es-419/estrategias-de-marketing/automatizacion/impacto-ia-negocios-vidas/", p:"Panorama general, escrito para América Latina."},
-   {meta:"Reuters Institute · Universidad de Oxford · en castellano", h:"Tendencias y predicciones para 2026 en medios y tecnología", u:"https://reutersinstitute.politics.ox.ac.uk/es/periodismo-medios-y-tecnologia-tendencias-y-predicciones-para-2026", p:"Informe anual de acceso abierto. La IA generativa como cambio de fondo en cómo se accede a la información."},
-   {meta:"Nielsen · 2026", h:"La búsqueda y el descubrimiento pasan por IA", u:"https://www.nielsen.com/news-center/2026/gen-alpha-leads-shift-to-ai-powered-entertainment-search-discovery-and-recommendations/", p:"66 % usa más chatbots que hace año y medio; 80 % en la generación más joven."},
-   {meta:"IAB Argentina · la cámara del sector", h:"Informes y eventos del mercado local", u:"https://www.iabargentina.com.ar/", p:"Publican estudios de inversión publicitaria y consumo digital en Argentina, de descarga libre."}]},
+   {meta:"INDEC · cada tres meses", h:"Cómo está el trabajo en Argentina", u:"https://www.indec.gob.ar/indec/web/Nivel4-Tema-4-31-58", p:"Las cifras oficiales de empleo, desocupación e informalidad, por edad y nivel educativo. Se actualizan cada trimestre."},
+   {meta:"Organización Internacional del Trabajo · 2025", h:"La IA generativa y los empleos", u:"https://www.ilo.org/es/node/706766", p:"Uno de cada cuatro trabajadores está en una ocupación con alguna exposición a la IA generativa. La conclusión del estudio: lo más probable es que transforme los trabajos, más que reemplazarlos."},
+   {meta:"Ministerio de Capital Humano", h:"Programas de empleo vigentes", u:"https://www.argentina.gob.ar/trabajo/buscastrabajo", p:"Qué programas públicos existen hoy para buscar trabajo, emprender o capacitarse, y dónde pedir asesoramiento."}]},
 
  p4:{rot:"Continuidad", t:"¿Puedo seguir estudiando?",
   items:[
-   {meta:"Diplomatura", h:"UNC · Comercio Electrónico y Marketing Digital", u:"https://www.unc.edu.ar/agenda/diplomatura-en-comercio-electr%C3%B3nico-y-marketing-digital", p:"Facultad de Ciencias Económicas."},
-   {meta:"Tecnicatura universitaria", h:"Universidad Provincial de Córdoba", u:"https://www.upc.edu.ar/carreras/tecnicatura-universitaria-en-marketing-y-negocios-digitales/", p:"Marketing y Negocios Digitales."}
+   {meta:"Universidad Nacional de Córdoba", h:"Buscador de posgrados de la UNC", u:"https://posgrados.unc.edu.ar/", p:"Especializaciones, maestrías y doctorados, filtrables por área."},
+   {meta:"Universidad Provincial de Córdoba", h:"Carreras y formación de la UPC", u:"https://www.upc.edu.ar/", p:"Tecnicaturas y licenciaturas que complementan otras formaciones."},
+   {meta:"UTN · Facultad Regional Córdoba", h:"Posgrados de la UTN Córdoba", u:"https://www.frc.utn.edu.ar/posgrado/", p:"Formación de posgrado en áreas técnicas y de gestión."}
    ],
-  nota:"Sólo entran opciones de universidades públicas. La oferta privada existe, pero tiene costo: la consultás directamente en cada institución."},
+  nota:"Sólo entran universidades públicas. Ojo: que la universidad sea pública no siempre significa que el posgrado sea gratis; muchos tienen arancel, y conviene consultarlo en cada carrera."},
 
  p5:{rot:"Derechos", t:"¿Qué me corresponde?",
   clave:"Todo lo de acá sale de fuentes oficiales del Estado y se consulta gratis.",
@@ -152,7 +152,7 @@ var CONTENIDO = {
    {meta:"Programa Asistir · nacional", h:"Asesoramiento jurídico gratuito para trabajadores", u:"https://www.argentina.gob.ar/servicio/solicitar-asesoramiento-juridico-gratuito-para-trabajadores-asistir", p:"La vía nacional, si lo tuyo no se resuelve en la provincia."}]},
 
  p6:{rot:"Información", t:"¿A quién le pregunto?",
-  clave:"En el campo digital buena parte de la información no está escrita en ningún lado: circula entre quien pregunta y quien contesta.",
+  clave:"Buena parte de la información sobre el primer trabajo no está escrita en ningún lado: circula entre quien pregunta y quien contesta.",
   listas:[
    {t:"Donde estudiás", l:["¿Hay área de pasantías o vinculación con empresas? ¿Quién decide?",
      "¿Hay convenios con universidades? ¿Qué me reconocen?",
@@ -170,8 +170,8 @@ var CONTENIDO = {
   clave:"Recibirse no obliga a entrar ya a trabajar de lo que se estudió. El trabajo es una parte del proyecto de vida, no el proyecto entero, y el proyecto se puede revisar.",
   items:[
    {meta:"Seguir formándose", h:"Estudiar otra cosa, o algo complementario", p:"Hay quien suma una formación de otro campo y arma un perfil propio. La tarjeta «¿Puedo seguir estudiando?» muestra opciones públicas."},
-   {meta:"Trabajar de otra cosa, por un tiempo", h:"Un trabajo que no es del rubro también es experiencia", p:"Atención al público, ventas o tareas administrativas desarrollan habilidades que después se usan en el campo. No es un retroceso si se elige con un para qué."},
-   {meta:"Participar sin cobrar", h:"Proyectos comunitarios, voluntariados, colectivos", p:"Organizaciones sociales, clubes o proyectos culturales necesitan comunicación y redes. Es una forma de aprender y de armar vínculos fuera del mercado."},
+   {meta:"Trabajar de otra cosa, por un tiempo", h:"Un trabajo que no es del rubro también es experiencia", p:"Atención al público, ventas o tareas administrativas desarrollan habilidades que después se usan en la profesión. No es un retroceso si se elige con un para qué."},
+   {meta:"Participar sin cobrar", h:"Proyectos comunitarios, voluntariados, colectivos", p:"Organizaciones sociales, clubes o proyectos culturales necesitan gente de todas las profesiones. Es una forma de aprender y de armar vínculos fuera del mercado."},
    {meta:"Emprender", h:"Un proyecto propio, chico, para probar", p:"Empezar chico permite probar si el proyecto funciona antes de dejar otras cosas. Para cobrar hay que estar dado de alta en el monotributo: la tarjeta «¿Qué me corresponde?» explica cómo."},
    {meta:"Tomarse un tiempo", h:"Una pausa también puede ser una decisión", p:"Viajar, cuidar a alguien, ordenar lo que se quiere. Lo importante es poder pensarlo, no cumplir un calendario ajeno."}],
   nota:"Para pensar en grupo: ¿qué lugar querés que ocupe el trabajo en tus próximos dos años? ¿Qué otras cosas querés que entren?"}
